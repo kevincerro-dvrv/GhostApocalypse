@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public GameObject ghostPrefab;
+    public static GameController instance;
+    private int totalScore;
     private Vector3[] spawnPoints = {
         new Vector3(-10f, 2.45f, 0f),
         new Vector3(-10f, 1.66f, 0f),
@@ -13,10 +15,15 @@ public class GameController : MonoBehaviour
         new Vector3(-10f, -3.14f, 0f)
     };
 
+    
+    void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -32,5 +39,11 @@ public class GameController : MonoBehaviour
     {
         Vector3 spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
         Instantiate(ghostPrefab, spawnPoint, Quaternion.identity);
+    }
+
+    public void AddPoints(int points)
+    {
+        totalScore += points;
+        Debug.Log(totalScore);
     }
 }

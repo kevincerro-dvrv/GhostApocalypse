@@ -26,13 +26,15 @@ public class Barrier : MonoBehaviour
 
     private void Move(Vector3 vector)
     {
+        // Calculate velocity
         velocity = vector * speed;
-        transform.position = transform.position + velocity * Time.deltaTime;
 
-        if (transform.position.y < -4) {
-            transform.position = new Vector3(transform.position.x, -4, transform.position.z);
-        } else if(transform.position.y > 4) {
-            transform.position = new Vector3(transform.position.x, 4, transform.position.z);
-        }
+        // Calculate new position vector
+        Vector3 newPosition = transform.position;
+        newPosition += velocity * Time.deltaTime;
+        newPosition.y = Mathf.Clamp(newPosition.y, -4f, 4f); 
+
+        // Set position
+        transform.position = newPosition;
     }
 }
