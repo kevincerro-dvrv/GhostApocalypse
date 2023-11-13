@@ -5,12 +5,18 @@ using UnityEngine;
 public class Ghost : MonoBehaviour
 {
     public float speed = 6;
-    public Vector3 velocity;
+    public AudioClip spawnSound;
+    public AudioClip hitSound;
+    
+    private Vector3 velocity;
     private int points;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         if (Random.Range(0f, 1f) < 0.3f) {
             // Perpendicular movement
             velocity = GenerateRandomVector() * speed;
@@ -20,21 +26,26 @@ public class Ghost : MonoBehaviour
             velocity = Vector3.right * speed;
             points = 150;
         }
+
+        audioSource.PlayOneShot(this.spawnSound);
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Stop moving if gameover
+        if (GameController.instance.IsGameOver) {
+            GetComponent<Animator>().enabled = false;
+            return;
+        }
+
+        // Move ghost
         transform.position = transform.position + velocity * Time.deltaTime;
 
-        // Better to use OnBecameInvisible
-        if (transform.position.x > 20f) {
-            Destroy(gameObject);
+        if (transform.position.x > 10f) {
+            DestroyGhost();
+            GameController.instance.GhostSkippedBarrier();
         }
-    }
-
-    void OnBecameInvisible() {
-        Destroy(gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -56,9 +67,10 @@ public class Ghost : MonoBehaviour
 
     private void Die()
     {
+        audioSource.PlayOneShot(this.hitSound);
         velocity = Vector3.zero;
         GetComponent<Animator>().SetBool("isDead", true);
-        GameController.instance.AddPoints(points);
+        GameController.instance.GhostKilled(points);
     }
 
     private void DestroyGhost()

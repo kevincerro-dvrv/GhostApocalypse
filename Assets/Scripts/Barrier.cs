@@ -15,6 +15,11 @@ public class Barrier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Stop moving if gameover
+        if (GameController.instance.IsGameOver) {
+            return;
+        }
+
         if (Input.GetKey(KeyCode.UpArrow)) {
             Move(Vector3.up);
         }
