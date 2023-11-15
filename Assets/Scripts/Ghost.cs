@@ -7,6 +7,8 @@ public class Ghost : MonoBehaviour
     public float speed = 6;
     public AudioClip spawnSound;
     public AudioClip hitSound;
+    public GameObject normalRewardSignPrefab;
+    public GameObject bonusRewardSignPrefab;
     
     private Vector3 velocity;
     private int points;
@@ -20,11 +22,11 @@ public class Ghost : MonoBehaviour
         if (Random.Range(0f, 1f) < 0.3f) {
             // Perpendicular movement
             velocity = GenerateRandomVector() * speed;
-            points = 100;
+            points = 150;
         } else {
             // Horizontal movement
             velocity = Vector3.right * speed;
-            points = 150;
+            points = 100;
         }
 
         audioSource.PlayOneShot(this.spawnSound);
@@ -71,6 +73,16 @@ public class Ghost : MonoBehaviour
         velocity = Vector3.zero;
         GetComponent<Animator>().SetBool("isDead", true);
         GameController.instance.GhostKilled(points);
+
+        // Add reward sign
+        switch (points) {
+            case 150:
+                Instantiate(bonusRewardSignPrefab, transform.position + Vector3.up, Quaternion.identity);
+                break;
+            default:
+                Instantiate(normalRewardSignPrefab, transform.position + Vector3.up, Quaternion.identity);
+                break;
+        }
     }
 
     private void DestroyGhost()

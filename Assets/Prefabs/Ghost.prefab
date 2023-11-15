@@ -124,6 +124,8 @@ MonoBehaviour:
   speed: 6
   spawnSound: {fileID: 8300000, guid: c81081db2735e7c4d9ac5d13def9c752, type: 3}
   hitSound: {fileID: 8300000, guid: fc3a38f0a9daa5e48b2ea67cd06897c3, type: 3}
+  normalRewardSignPrefab: {fileID: 4566854533007879207, guid: 229ada7789732fb4f85aa7f4cef321e3, type: 3}
+  bonusRewardSignPrefab: {fileID: 4566854533007879207, guid: 80cea70dd449dab4989d44453edb3996, type: 3}
 --- !u!61 &6660329074890301026
 BoxCollider2D:
   m_ObjectHideFlags: 0

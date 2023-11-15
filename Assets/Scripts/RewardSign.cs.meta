@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 99a79384786a17c47b749301936706dd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - regularScoreSprite: {fileID: 21300000, guid: dfd57351b1095ce41a7ad76b9f24c263, type: 3}
+  - bonusScoreSprite: {fileID: 21300000, guid: 38ce82047d1a52b41ab5ea88ca1933c8, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
