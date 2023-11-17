@@ -4,45 +4,32 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
-    public float speed = 6;
+    protected float speed = 6;
     public AudioClip spawnSound;
     public AudioClip hitSound;
     public GameObject normalRewardSignPrefab;
     public GameObject bonusRewardSignPrefab;
     
-    private Vector3 velocity;
-    private int points;
-    private AudioSource audioSource;
+    protected Vector3 velocity;
+    protected int points;
+    protected AudioSource audioSource;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         audioSource = GetComponent<AudioSource>();
-
-        if (Random.Range(0f, 1f) < 0.3f) {
-            // Perpendicular movement
-            velocity = GenerateRandomVector() * speed;
-            points = 150;
-        } else {
-            // Horizontal movement
-            velocity = Vector3.right * speed;
-            points = 100;
-        }
-
         audioSource.PlayOneShot(this.spawnSound);
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         // Stop moving if gameover
         if (GameController.instance.IsGameOver) {
             GetComponent<Animator>().enabled = false;
+            velocity = Vector3.zero;
             return;
         }
-
-        // Move ghost
-        transform.position = transform.position + velocity * Time.deltaTime;
 
         if (transform.position.x > 10f) {
             DestroyGhost();
@@ -60,7 +47,7 @@ public class Ghost : MonoBehaviour
         Die();
     }
 
-    private Vector3 GenerateRandomVector()
+    protected Vector3 GenerateRandomVector()
     {
         Vector3 targetVector = new Vector3(8.5f, Random.Range(-5f, 5f), 0f);
 
@@ -71,6 +58,7 @@ public class Ghost : MonoBehaviour
     {
         audioSource.PlayOneShot(this.hitSound);
         velocity = Vector3.zero;
+        GetComponent<Collider2D>().enabled = false;
         GetComponent<Animator>().SetBool("isDead", true);
         GameController.instance.GhostKilled(points);
 

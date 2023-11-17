@@ -835,7 +835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18598fbf20302048b3fea111570e05e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ghostPrefab: {fileID: 8633353659020426250, guid: 6ed066eb407a31b4aa652266333bdefb, type: 3}
+  ghostPrefab: {fileID: 1854733165370508211, guid: 7ab95e4401554074587da788ff7d2c44, type: 3}
   gameOverSign: {fileID: 1052387304}
   health: 4
   healthGameObjects:
