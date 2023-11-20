@@ -8,11 +8,15 @@ public class GameController : MonoBehaviour
     public GameObject ghostPrefab;
     public GameObject pinkGhostPrefab;
     public GameObject gameOverSign;
+    public GameObject kabomGameObject;
     public int health = 4;
     public static GameController instance;
     private int totalScore;
     private int ghostsKilled = 0;
     private bool isGameOver = false;
+    private bool hasKaboom = false;
+    private int nextKaboom = 1000;
+    public GameObject scoreBoard;
     private Vector3[] spawnPoints = {
         new Vector3(-10f, 2.45f, 0f),
         new Vector3(-10f, 1.66f, 0f),
@@ -48,6 +52,11 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
+        // Use kaboom if possible
+        if (Input.GetKeyDown(KeyCode.Space) && hasKaboom) {
+            UseKaboom();
+        }
+
         // Stop game if gameOver
         if (isGameOver) {
             gameOverSign.SetActive(true);
@@ -57,7 +66,9 @@ public class GameController : MonoBehaviour
         float random = Random.Range(0f, 1f);
         if (random < 0.001f) {
             SpawnGhost();
-        }   
+        }
+
+        kabomGameObject.SetActive(hasKaboom);
     }
 
     private void SpawnGhost()
@@ -77,6 +88,15 @@ public class GameController : MonoBehaviour
         totalScore += points;
         Debug.Log($"{ghostsKilled} ghosts killed.");
         Debug.Log($"{totalScore} points.");
+
+        // Handle kaboom superpower
+        if(totalScore >= nextKaboom) {
+            hasKaboom = true;
+            nextKaboom += 2000;
+        }
+
+        // Render scoreboard
+        scoreBoard.GetComponent<ScoreBoard>().ShowPoints(totalScore);
     }
 
     public void GhostSkippedBarrier()
@@ -90,5 +110,15 @@ public class GameController : MonoBehaviour
         }
 
         Debug.Log($"{health} health points remaining.");
+    }
+
+    private void UseKaboom()
+    {
+        hasKaboom = false;
+
+        GameObject[] ghosts = GameObject.FindGameObjectsWithTag("ghost");
+        foreach (GameObject ghost in ghosts) {
+            ghost.GetComponent<Ghost>().Die();
+        }
     }
 }

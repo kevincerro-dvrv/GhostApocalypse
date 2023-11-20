@@ -54,7 +54,7 @@ public class Ghost : MonoBehaviour
         return (targetVector - transform.position).normalized;
     }
 
-    private void Die()
+    public void Die()
     {
         audioSource.PlayOneShot(this.hitSound);
         velocity = Vector3.zero;
