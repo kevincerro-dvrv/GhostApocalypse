@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public GameObject ghostPrefab;
+    public GameObject pinkGhostPrefab;
     public GameObject gameOverSign;
     public int health = 4;
     public static GameController instance;
@@ -62,7 +63,12 @@ public class GameController : MonoBehaviour
     private void SpawnGhost()
     {
         Vector3 spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        Instantiate(ghostPrefab, spawnPoint, Quaternion.identity);
+
+        if (Random.Range(0f, 1f) < 0.1f) {
+            Instantiate(pinkGhostPrefab, spawnPoint, Quaternion.identity);
+        } else {
+            Instantiate(ghostPrefab, spawnPoint, Quaternion.identity);
+        }
     }
 
     public void GhostKilled(int points)
