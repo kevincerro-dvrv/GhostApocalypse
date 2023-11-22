@@ -388,6 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 191778149}
   - component: {fileID: 191778148}
+  - component: {fileID: 191778150}
   m_Layer: 0
   m_Name: numeros_4
   m_TagString: Untagged
@@ -462,6 +463,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1660062635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &191778150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191778147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c53bc4da0c6fb45add9a2293e00bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numbers:
+  - {fileID: 1585519030, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1755107560, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1412317306, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1758218228, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1746511278, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -2076667925, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 578550181, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -440782154, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1232142644, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1142177416, guid: d86071e03f503414b8ef334510e357a7, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 959151351}
   - component: {fileID: 959151350}
+  - component: {fileID: 959151352}
   m_Layer: 0
   m_Name: numeros_1
   m_TagString: Untagged
@@ -638,6 +663,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1660062635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &959151352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959151349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c53bc4da0c6fb45add9a2293e00bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numbers:
+  - {fileID: 1585519030, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1755107560, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1412317306, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1758218228, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1746511278, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -2076667925, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 578550181, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -440782154, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1232142644, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1142177416, guid: d86071e03f503414b8ef334510e357a7, type: 3}
 --- !u!1 &1052387304
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1079458792}
   - component: {fileID: 1079458791}
+  - component: {fileID: 1079458793}
   m_Layer: 0
   m_Name: numeros_0
   m_TagString: Untagged
@@ -806,6 +855,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1660062635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1079458793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079458790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c53bc4da0c6fb45add9a2293e00bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numbers:
+  - {fileID: 1585519030, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1755107560, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1412317306, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1758218228, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1746511278, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -2076667925, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 578550181, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -440782154, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1232142644, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1142177416, guid: d86071e03f503414b8ef334510e357a7, type: 3}
 --- !u!1 &1341262177
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1341262179}
   - component: {fileID: 1341262178}
+  - component: {fileID: 1341262180}
   m_Layer: 0
   m_Name: numeros_2
   m_TagString: Untagged
@@ -890,6 +963,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1660062635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1341262180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341262177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c53bc4da0c6fb45add9a2293e00bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numbers:
+  - {fileID: 1585519030, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1755107560, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1412317306, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1758218228, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1746511278, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -2076667925, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 578550181, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -440782154, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1232142644, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1142177416, guid: d86071e03f503414b8ef334510e357a7, type: 3}
 --- !u!1 &1361965676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,22 +1184,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digits:
-  - {fileID: 1079458790}
-  - {fileID: 959151349}
-  - {fileID: 1341262177}
-  - {fileID: 1785949595}
-  - {fileID: 191778147}
-  numbers:
-  - {fileID: 1585519030, guid: d86071e03f503414b8ef334510e357a7, type: 3}
-  - {fileID: 1755107560, guid: d86071e03f503414b8ef334510e357a7, type: 3}
-  - {fileID: -1412317306, guid: d86071e03f503414b8ef334510e357a7, type: 3}
-  - {fileID: 1758218228, guid: d86071e03f503414b8ef334510e357a7, type: 3}
-  - {fileID: 1746511278, guid: d86071e03f503414b8ef334510e357a7, type: 3}
-  - {fileID: -2076667925, guid: d86071e03f503414b8ef334510e357a7, type: 3}
-  - {fileID: 578550181, guid: d86071e03f503414b8ef334510e357a7, type: 3}
-  - {fileID: -440782154, guid: d86071e03f503414b8ef334510e357a7, type: 3}
-  - {fileID: -1232142644, guid: d86071e03f503414b8ef334510e357a7, type: 3}
-  - {fileID: -1142177416, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1079458793}
+  - {fileID: 959151352}
+  - {fileID: 1341262180}
+  - {fileID: 1785949598}
+  - {fileID: 191778150}
 --- !u!4 &1660062635
 Transform:
   m_ObjectHideFlags: 0
@@ -1302,6 +1387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785949597}
   - component: {fileID: 1785949596}
+  - component: {fileID: 1785949598}
   m_Layer: 0
   m_Name: numeros_3
   m_TagString: Untagged
@@ -1376,6 +1462,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1660062635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1785949598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785949595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c53bc4da0c6fb45add9a2293e00bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numbers:
+  - {fileID: 1585519030, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1755107560, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1412317306, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1758218228, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 1746511278, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -2076667925, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: 578550181, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -440782154, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1232142644, guid: d86071e03f503414b8ef334510e357a7, type: 3}
+  - {fileID: -1142177416, guid: d86071e03f503414b8ef334510e357a7, type: 3}
 --- !u!1 &1934464278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,7 +1519,7 @@ MonoBehaviour:
   gameOverSign: {fileID: 1052387304}
   kabomGameObject: {fileID: 1361965676}
   health: 4
-  scoreBoard: {fileID: 1660062633}
+  scoreBoard: {fileID: 1660062634}
   healthGameObjects:
   - {fileID: 1730286407}
   - {fileID: 30152534}

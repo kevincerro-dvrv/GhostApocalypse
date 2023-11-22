@@ -4,23 +4,13 @@ using UnityEngine;
 
 public class ScoreBoard: MonoBehaviour
 {
-    public GameObject[] digits;
-    public Sprite[] numbers;
+    public ScoreDigit[] digits;
 
     public void ShowPoints(int points)
     {
-        int pointsAux = points;
-        int digit = 0;
-        while(pointsAux > 0)
-        {
-            RenderNumber(digit, pointsAux % 10);
-            pointsAux = pointsAux / 10;
-            digit++;
+        foreach (ScoreDigit digit in digits) {
+            digit.RenderNumber(points % 10);
+            points = points / 10;
         }
-    }
-
-    private void RenderNumber(int digit, int number)
-    {
-        digits[digit].GetComponent<SpriteRenderer>().sprite = numbers[number];
     }
 }

@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
     private bool isGameOver = false;
     private bool hasKaboom = false;
     private int nextKaboom = 1000;
-    public GameObject scoreBoard;
+    public ScoreBoard scoreBoard;
     private Vector3[] spawnPoints = {
         new Vector3(-10f, 2.45f, 0f),
         new Vector3(-10f, 1.66f, 0f),
@@ -96,7 +96,7 @@ public class GameController : MonoBehaviour
         }
 
         // Render scoreboard
-        scoreBoard.GetComponent<ScoreBoard>().ShowPoints(totalScore);
+        scoreBoard.ShowPoints(totalScore);
     }
 
     public void GhostSkippedBarrier()
