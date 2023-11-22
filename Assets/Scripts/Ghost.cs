@@ -14,6 +14,8 @@ public class Ghost : MonoBehaviour
     protected int points;
     protected AudioSource audioSource;
 
+    protected bool isDead = false;
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
@@ -56,6 +58,12 @@ public class Ghost : MonoBehaviour
 
     public void Die()
     {
+        if (isDead) {
+            return;
+        }
+
+        isDead = true;
+
         audioSource.PlayOneShot(this.hitSound);
         velocity = Vector3.zero;
         GetComponent<Collider2D>().enabled = false;
